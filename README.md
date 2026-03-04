@@ -79,7 +79,7 @@ HAVING SUM(PR.recaudacion) > 5000;
 
 ---
 
-## EJERCICIO 3: Subconsultas y Herramientas *(20% de la nota)*
+## EJERCICIO 3: Subconsultas y Herramientas 
 
 ### 3.1 Películas con recaudación superior a la media
 
@@ -100,7 +100,7 @@ WHERE PR.recaudacion > (
 
 ---
 
-## EJERCICIO 4: Optimización de Consultas *(20% de la nota)*
+## EJERCICIO 4: Optimización de Consultas
 
 ### 4.1 Índice para búsquedas por fecha
 
