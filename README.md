@@ -1,9 +1,5 @@
 # Lenguaje SQL: Consulta de Datos (DML)
-
-**RA3:** Consulta la información almacenada en una base de datos empleando asistentes, herramientas gráficas y el lenguaje de manipulación de datos.
-
 **Nombre:** Pablo Jurado Bioque  
-**Fecha:** ___________
 
 ---
 
