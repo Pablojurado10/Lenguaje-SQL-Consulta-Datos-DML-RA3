@@ -18,9 +18,9 @@ Esquema relacional para gestionar la información de una cadena de cines:
 
 ---
 
-## EJERCICIO 1: Consultas Básicas y Composiciones *(40% de la nota)*
+## EJERCICIO 1: Consultas Básicas y Composiciones 
 
-### 1.1 (CE b — 10%) Películas de Ciencia Ficción ordenadas alfabéticamente
+### 1.1 Películas de Ciencia Ficción ordenadas alfabéticamente
 
 ```sql
 SELECT titulo, genero
@@ -31,7 +31,7 @@ ORDER BY titulo ASC;
 
 ---
 
-### 1.2 (CE c — 20%) Nombre del cine y título de película por proyección (JOIN)
+### 1.2 Nombre del cine y título de película por proyección (JOIN)
 
 ```sql
 SELECT C.nombre, P.titulo
@@ -42,7 +42,7 @@ JOIN PELICULAS P  ON PR.id_pelicula = P.id_pelicula;
 
 ---
 
-### 1.3 (CE d — 10%) Cines sin proyecciones (LEFT JOIN)
+### 1.3 Cines sin proyecciones (LEFT JOIN)
 
 ```sql
 SELECT C.nombre, PR.id_pelicula
@@ -54,9 +54,9 @@ LEFT JOIN PROYECCIONES PR ON C.id_cine = PR.id_cine;
 
 ---
 
-## EJERCICIO 2: Consultas de Resumen y Agrupación *(20% de la nota)*
+## EJERCICIO 2: Consultas de Resumen y Agrupación 
 
-### 2.1 (CE e — 10%) Recaudación total por cine
+### 2.1  Recaudación total por cine
 
 ```sql
 SELECT C.nombre, SUM(PR.recaudacion) AS recaudacion_total
@@ -67,7 +67,7 @@ GROUP BY C.nombre;
 
 ---
 
-### 2.2 (CE g — 10%) Cines con recaudación superior a 5.000 € (HAVING)
+### 2.2 Cines con recaudación superior a 5.000 € (HAVING)
 
 ```sql
 SELECT C.nombre, SUM(PR.recaudacion) AS recaudacion_total
@@ -85,7 +85,7 @@ HAVING SUM(PR.recaudacion) > 5000;
 
 ## EJERCICIO 3: Subconsultas y Herramientas *(20% de la nota)*
 
-### 3.1 (CE f — 15%) Películas con recaudación superior a la media
+### 3.1 Películas con recaudación superior a la media
 
 ```sql
 SELECT DISTINCT P.titulo
@@ -98,7 +98,7 @@ WHERE PR.recaudacion > (
 
 ---
 
-### 3.2 (CE a — 5%) MySQL Workbench vs Consola CLI
+### 3.2 MySQL Workbench vs Consola CLI
 
 > El comando DML es `SELECT` en ambos casos. El resultado obtenido es idéntico; la única diferencia es la presentación: **Workbench** lo muestra en una tabla visual interactiva, mientras que la **consola** lo devuelve en texto plano.
 
@@ -106,7 +106,7 @@ WHERE PR.recaudacion > (
 
 ## EJERCICIO 4: Optimización de Consultas *(20% de la nota)*
 
-### 4.1 (CE h — 10%) Índice para búsquedas por fecha
+### 4.1 Índice para búsquedas por fecha
 
 ```sql
 CREATE INDEX idx_proyecciones_fecha ON PROYECCIONES (fecha);
@@ -116,7 +116,7 @@ CREATE INDEX idx_proyecciones_fecha ON PROYECCIONES (fecha);
 
 ---
 
-### 4.2 (CE h — 10%) Comparativa de eficiencia
+### 4.2 Comparativa de eficiencia
 
 #### Versión 1 — Ineficiente 
 
